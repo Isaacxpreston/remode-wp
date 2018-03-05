@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- vue files -->
-<div id=app></div><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/manifest.298d74c79f5df4343b14.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/vendor.17d770379dd0b1b3199f.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/app.7b1947e0406b2282a3de.js></script>
+<div id=app></div><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/manifest.298d74c79f5df4343b14.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/vendor.a569ddd623b21a1fc1c1.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/app.a648d08a5d5e5ba1aef4.js></script>
 
 
 <div id="nf-content-speaking">
@@ -43,14 +43,28 @@
 
 
 	<!-- main styles -->
-	<link href=wp-content/themes/twentyseventeen/assets/css/app.4ef38cb8c861d2ee6a266f80ff7b973f.css rel=stylesheet>
+	<link href=wp-content/themes/twentyseventeen/assets/css/app.3c8a9380187caf12a04b001a72afe5e6.css rel=stylesheet>
 
 	<!-- form overwrite styles -->
 	<link rel="stylesheet" href="wp-content/themes/twentyseventeen/assets/css/custom.css" type="text/css" media="all">
+
 	<style>
 		body, .site-content {
 			background: white !important;
+			padding: 0px !important;
 		}
-		</style>
+	</style>
+
+
+	<!-- bugherd -->
+
+	<script type='text/javascript'>
+(function (d, t) {
+  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  bh.type = 'text/javascript';
+  bh.src = 'https://www.bugherd.com/sidebarv2.js?apikey=xwb2jq4fnlxcotg0gchqew';
+  s.parentNode.insertBefore(bh, s);
+  })(document, 'script');
+</script>
 
 	<?php get_footer();
