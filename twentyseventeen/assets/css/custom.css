@@ -92,7 +92,7 @@ a,
 
 body,
 .site-content {
-  background: rgba(255, 0, 0, 0.15); }
+  background: rgba(255, 0, 0, 0.1); }
 
 #nf-content-speaking,
 #nf-content-attending,
@@ -211,12 +211,23 @@ body,
   .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox]:hover + label::after,
   .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox]:checked + label::after {
     background: #FFFFFF;
-    border-bottom: 1px solid #40DFF7;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1); }
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=rethink]:hover + label::after,
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=rethink]:checked + label::after {
+    border-bottom: 1px solid #40DFF7; }
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=remake]:hover + label::after,
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=remake]:checked + label::after {
+    border-bottom: 1px solid #04E400; }
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=remarket]:hover + label::after,
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=remarket]:checked + label::after {
+    border-bottom: 1px solid #513BF4; }
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=reinvest]:hover + label::after,
+  .nf-form-cont .list-checkbox-wrap .nf-field-element li input[type=checkbox][value=reinvest]:checked + label::after {
+    border-bottom: 1px solid #F70CF7; }
   .nf-form-cont .nf-form-title {
     display: none; }
   .nf-form-cont [aria-invalid="true"] {
-    border: 1px solid #F70CF7; }
+    border: 1px solid #F70CF7 !important; }
   .nf-form-cont .nf-error-msg {
     color: #F70CF7; }
 
