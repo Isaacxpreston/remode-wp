@@ -17,30 +17,42 @@
 
 get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
+<!--  -->
 
 
-			the_content();
+<h1><?php echo wp_title(); ?></h1>
+<!-- todo: redirect script -->
 
-				// get_template_part( 'template-parts/page/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				// if ( comments_open() || get_comments_number() ) :
-				// 	comments_template();
-				// endif;
+<!-- https://www.advancedcustomfields.com/resources/get_field_objects/ -->
+<?php
 
-			endwhile; // End of the loop.
-			?>
+/*
+*  get all custom fields, loop through them and create a label => value markup
+*/
 
-		</main>
-		<!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+$fields = get_field_objects();
+
+if( $fields )
+{
+	foreach( $fields as $field_name => $field )
+	{
+		echo '<div>';
+			// echo '<h3>' . $field['label'] . '</h3>';
+			if (is_array($field['value'])) {
+				foreach( $field['value'] as $key => $value ) {
+					if ($key === 'url') {
+						echo "<img src='{$value}' style='height: 120px !important;' /> ";
+					}
+				}
+			} else {
+				echo $field['value'];
+			}
+		echo '</div>';
+	}
+}
+
+?>
 
 <?php 
 

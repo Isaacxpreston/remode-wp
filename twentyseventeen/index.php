@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- vue files -->
-<div id=app></div><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/manifest.298d74c79f5df4343b14.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/vendor.efa6e338dab8ca69d1a5.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/app.f9ec3b52de510c3ceda7.js></script>
+<div id=app></div><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/manifest.298d74c79f5df4343b14.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/vendor.efa6e338dab8ca69d1a5.js></script><script type=text/javascript src=wp-content/themes/twentyseventeen/assets/js/app.31e9184cb29c4d6da632.js></script>
 
 <div id="nf-content-speaking">
 	<!-- Speaking Form -->
@@ -41,7 +41,7 @@
 </div>
 
 <!-- main styles -->
-<link href=wp-content/themes/twentyseventeen/assets/css/app.5e6e96a574fa76755b29660b179bbb2f.css rel=stylesheet>
+<link href=wp-content/themes/twentyseventeen/assets/css/app.1d2589b82345089156979b7558da44c4.css rel=stylesheet>
 
 <!-- form overwrite styles -->
 <link rel="stylesheet" href="wp-content/themes/twentyseventeen/assets/css/custom.css" type="text/css" media="all">
