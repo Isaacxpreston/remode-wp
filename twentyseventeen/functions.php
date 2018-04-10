@@ -588,21 +588,38 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 
 // allow cors (ip)
-header("Access-Control-Allow-Origin: *");
+// header("Access-Control-Allow-Origin: *");
 
 
-
-add_action( 'rest_api_init', function() {
+// add_action( 'rest_api_init', function() {
     
-	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
-	add_filter( 'rest_pre_serve_request', function( $value ) {
-		$origin = get_http_origin();
-		if ( $origin ) {
-			header( 'Access-Control-Allow-Origin: ' . esc_url_raw( $origin ) );
-		}
-		header( 'Access-Control-Allow-Origin: ' . esc_url_raw( site_url() ) );
-		header( 'Access-Control-Allow-Methods: GET' );
-		return $value;
+// 	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+// 	add_filter( 'rest_pre_serve_request', function( $value ) {
+// 		$origin = get_http_origin();
+// 		if ( $origin ) {
+// 			header( 'Access-Control-Allow-Origin: ' . esc_url_raw( $origin ) );
+// 		}
+// 		header( 'Access-Control-Allow-Origin: ' . esc_url_raw( site_url() ) );
+// 		header( 'Access-Control-Allow-Methods: GET' );
+// 		return $value;
 		
-	});
-}, 15 );
+// 	});
+// }, 15 );
+
+
+// function my_customize_rest_cors() {
+// 	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+// 	add_filter( 'rest_pre_serve_request', function( $value ) {
+// 		header( 'Access-Control-Allow-Origin: *' );
+// 		header( 'Access-Control-Allow-Methods: GET' );
+// 		header( 'Access-Control-Allow-Credentials: true' );
+// 		header( 'Access-Control-Expose-Headers: Link', false );
+// 		return $value;
+// 	} );
+// }
+// add_action( 'rest_api_init', 'my_customize_rest_cors', 15 );
+
+function add_cors_http_header(){
+	header("Access-Control-Allow-Origin: *");
+}
+add_action('init','add_cors_http_header');
